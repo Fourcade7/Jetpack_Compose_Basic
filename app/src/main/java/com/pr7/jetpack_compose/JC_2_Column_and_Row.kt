@@ -18,6 +18,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.pr7.jetpack_compose.ui.theme.Jetpack_ComposeTheme
+import com.pr7.jetpack_compose.ui.theme.PrCustomColor
 
 class JC_2_Column_and_Row : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +30,7 @@ class JC_2_Column_and_Row : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                  columndandrow()
+                  pr2()
                 }
             }
         }
@@ -38,7 +39,7 @@ class JC_2_Column_and_Row : ComponentActivity() {
 
 @Preview(showBackground = true)
 @Composable
-fun columndandrow(){
+fun pr2(){
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -63,4 +64,50 @@ fun columndandrow(){
     }
 
 }
+
+@Preview(showBackground = true)
+@Composable
+fun pr2_1(){
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+
+
+        ) {
+        Text(text = "axaxax")
+        Text(text = "axaxax")
+        Text(text = "axaxax")
+        Row(
+            modifier = Modifier
+                .wrapContentHeight()
+                .fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceAround
+        ) {
+            Text(text = "axaxax")
+            Text(text = "axaxax")
+            Text(text = "axaxax")
+        }
+
+        Surface(
+            modifier = Modifier
+                .width(200.dp)
+                .height(200.dp),
+            color= PrCustomColor,
+            shape = RoundedCornerShape(8.dp)
+
+        ) {
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center,
+
+            ){
+                Text(text = "Uaxax")
+            }
+
+
+        }
+    }
+}
+
 

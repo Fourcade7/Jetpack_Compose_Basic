@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -11,12 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Jetpack_Compose"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".JC_4_Text_Customization"
+            android:exported="false"
+            android:label="@string/title_activity_jc4_text_customization"
+            android:theme="@style/Theme.Jetpack_Compose">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".JC_3_Box_and_Align"
             android:exported="false"
             android:label="@string/title_activity_jc3_box_and_align"
-            android:theme="@style/Theme.Jetpack_Compose" >
+            android:theme="@style/Theme.Jetpack_Compose">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -25,7 +34,7 @@
             android:name=".JC_2_Column_and_Row"
             android:exported="false"
             android:label="@string/title_activity_jc2_column_and_row"
-            android:theme="@style/Theme.Jetpack_Compose" >
+            android:theme="@style/Theme.Jetpack_Compose">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -34,7 +43,7 @@
             android:name=".JC_1_First_Compose"
             android:exported="true"
             android:label="@string/title_activity_jc1_first_compose"
-            android:theme="@style/Theme.Jetpack_Compose" >
+            android:theme="@style/Theme.Jetpack_Compose">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
