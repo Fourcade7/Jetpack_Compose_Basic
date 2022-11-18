@@ -16,6 +16,7 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -76,7 +77,7 @@ fun pr4(){
             append("C")
             append("D")
         })
-        Text(text = "Axaxaxa".repeat(40))
+        Text(text = "Axaxaxa".repeat(40), maxLines = 4, overflow = TextOverflow.Clip)
 
     }
 }
