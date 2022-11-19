@@ -48,8 +48,6 @@ fun pr4(){
         Text(
             text = "Uaxaxa",
             color=Color.White,
-
-
             modifier = Modifier
                 .padding(35.dp)
                 .background(PrCustomColor)

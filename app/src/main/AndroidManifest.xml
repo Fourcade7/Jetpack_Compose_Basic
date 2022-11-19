@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Jetpack_Compose"
         tools:targetApi="31">
         <activity
+            android:name=".JC_5_Text_Selection"
+            android:exported="false"
+            android:label="@string/title_activity_jc5_text_selection"
+            android:theme="@style/Theme.Jetpack_Compose">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".JC_4_Text_Customization"
             android:exported="false"
             android:label="@string/title_activity_jc4_text_customization"
