@@ -6,4 +6,7 @@
     <string name="title_activity_jc3_box_and_align">JC_3_Box_and_Align</string>
     <string name="title_activity_jc4_text_customization">JC_4_Text_Customization</string>
     <string name="title_activity_jc5_text_selection">JC_5_Text_Selection</string>
+    <string name="title_activity_jc6_text_subscript_and_super_script">
+        JC_6_Text_Subscript_and_SuperScript
+    </string>
 </resources>
