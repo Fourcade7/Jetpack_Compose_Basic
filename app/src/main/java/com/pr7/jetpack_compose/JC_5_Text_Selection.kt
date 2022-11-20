@@ -39,7 +39,7 @@ fun pr5(){
 
         SelectionContainer() {
             Column() {
-            Text(text = "AXaxxaaxa")
+            Text(text = "AXaxxaaxa7")
             DisableSelection {
                Text(text = "Dont select") 
             }
