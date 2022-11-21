@@ -9,4 +9,7 @@
     <string name="title_activity_jc6_text_subscript_and_super_script">
         JC_6_Text_Subscript_and_SuperScript
     </string>
+    <string name="title_activity_jc7_expandable_card_with_animation">
+        JC_7_Expandable_Card_with_Animation
+    </string>
 </resources>
