@@ -44,7 +44,6 @@ class JC_7_Expandable_Card_with_Animation : ComponentActivity() {
                 Column(
                     modifier = Modifier
                         .fillMaxSize()
-
                         .background(backgrounddarkcolor)
                         .padding(15.dp),
 

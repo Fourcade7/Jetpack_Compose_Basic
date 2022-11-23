@@ -13,9 +13,9 @@
         android:theme="@style/Theme.Jetpack_Compose"
         tools:targetApi="31">
         <activity
-            android:name=".JC_7_Expandable_Card_with_Animation"
+            android:name=".JC_8_TextFields"
             android:exported="true"
-            android:label="@string/title_activity_jc7_expandable_card_with_animation"
+            android:label="@string/title_activity_jc8_text_fields"
             android:theme="@style/Theme.Jetpack_Compose">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,12 +27,21 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".JC_7_Expandable_Card_with_Animation"
+            android:exported="true"
+            android:label="@string/title_activity_jc7_expandable_card_with_animation"
+            android:theme="@style/Theme.Jetpack_Compose">
+
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".JC_6_Text_Subscript_and_SuperScript"
             android:exported="true"
             android:label="@string/title_activity_jc6_text_subscript_and_super_script"
             android:theme="@style/Theme.Jetpack_Compose">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
