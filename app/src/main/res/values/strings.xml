@@ -14,4 +14,5 @@
     </string>
     <string name="title_activity_jc8_text_fields">JC_8_TextFields</string>
     <string name="title_activity_jc9_google_button">JC_9_Google_Button</string>
+    <string name="title_activity_jc10_coil_image_library">JC_10_Coil_Image_Library</string>
 </resources>
