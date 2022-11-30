@@ -21,7 +21,6 @@ import androidx.compose.ui.graphics.GraphicsLayerScope
 import androidx.compose.ui.semantics.Role.Companion.Image
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import coil.compose.ImagePainter
 import coil.compose.rememberImagePainter
 import coil.transform.CircleCropTransformation
 import com.pr7.jetpack_compose.ui.theme.Jetpack_ComposeTheme
@@ -43,13 +42,9 @@ class JC_10_Coil_Image_Library : ComponentActivity() {
         }
     }
 }
-
-
-
 @Preview(showBackground = true)
 @Composable
 fun pr10(){
-
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -78,8 +73,6 @@ fun pr10(){
                 .height(200.dp)
         )
         val painterstate=painter.state
-
-
     }
 
 }
