@@ -16,15 +16,27 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".JC_11_Password_TextFields"
+            android:name=".JC_12_Gradient_Button"
             android:exported="true"
-            android:label="@string/title_activity_jc11_password_text_fields"
+            android:label="@string/title_activity_jc12_gradient_button"
             android:theme="@style/Theme.Jetpack_Compose">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".JC_11_Password_TextFields"
+            android:exported="true"
+            android:label="@string/title_activity_jc11_password_text_fields"
+            android:theme="@style/Theme.Jetpack_Compose">
+
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -34,8 +46,6 @@
             android:exported="true"
             android:label="@string/title_activity_jc10_coil_image_library"
             android:theme="@style/Theme.Jetpack_Compose">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
