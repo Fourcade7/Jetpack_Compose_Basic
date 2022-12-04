@@ -17,4 +17,5 @@
     <string name="title_activity_jc10_coil_image_library">JC_10_Coil_Image_Library</string>
     <string name="title_activity_jc11_password_text_fields">JC_11_Password_TextFields</string>
     <string name="title_activity_jc12_gradient_button">JC_12_Gradient_Button</string>
+    <string name="title_activity_jc13_lazy_column">JC_13_LazyColumn</string>
 </resources>

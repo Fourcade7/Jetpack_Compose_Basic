@@ -16,9 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".JC_12_Gradient_Button"
+            android:name=".JC_13_LazyColumn.JC_13_LazyColumn"
             android:exported="true"
-            android:label="@string/title_activity_jc12_gradient_button"
+            android:label="@string/title_activity_jc13_lazy_column"
             android:theme="@style/Theme.Jetpack_Compose">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,12 +31,19 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".JC_12_Gradient_Button"
+            android:exported="true"
+            android:label="@string/title_activity_jc12_gradient_button"
+            android:theme="@style/Theme.Jetpack_Compose">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".JC_11_Password_TextFields"
             android:exported="true"
             android:label="@string/title_activity_jc11_password_text_fields"
             android:theme="@style/Theme.Jetpack_Compose">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
