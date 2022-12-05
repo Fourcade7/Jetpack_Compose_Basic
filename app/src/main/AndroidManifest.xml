@@ -16,6 +16,21 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".JC_13_LazyColumn.JC_13_2_LazyColumn"
+            android:exported="true"
+            android:label="@string/title_activity_jc132_lazy_column"
+            android:theme="@style/Theme.Jetpack_Compose">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".JC_13_LazyColumn.JC_13_LazyColumn"
             android:exported="true"
             android:label="@string/title_activity_jc13_lazy_column"
