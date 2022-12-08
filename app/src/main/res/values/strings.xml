@@ -19,4 +19,8 @@
     <string name="title_activity_jc12_gradient_button">JC_12_Gradient_Button</string>
     <string name="title_activity_jc13_lazy_column">JC_13_LazyColumn</string>
     <string name="title_activity_jc132_lazy_column">JC_13_2_LazyColumn</string>
+    <string name="title_activity_jc14_room_database_dagger">JC_14_Room_Database_Dagger</string>
+    <string name="title_activity_jc14_text_fields_character_limit">
+        JC_14_TextFields_Character_LImit
+    </string>
 </resources>

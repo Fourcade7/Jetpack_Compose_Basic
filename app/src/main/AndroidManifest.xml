@@ -16,15 +16,26 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".JC_13_LazyColumn.JC_13_2_LazyColumn"
+            android:name=".JC_14_TextFields_Character_LImit"
             android:exported="true"
-            android:label="@string/title_activity_jc132_lazy_column"
+            android:label="@string/title_activity_jc14_text_fields_character_limit"
             android:theme="@style/Theme.Jetpack_Compose">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".JC_13_LazyColumn.JC_13_2_LazyColumn"
+            android:exported="true"
+            android:label="@string/title_activity_jc132_lazy_column"
+            android:theme="@style/Theme.Jetpack_Compose">
+
 
             <meta-data
                 android:name="android.app.lib_name"
