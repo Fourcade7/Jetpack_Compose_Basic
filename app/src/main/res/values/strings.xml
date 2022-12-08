@@ -23,4 +23,7 @@
     <string name="title_activity_jc14_text_fields_character_limit">
         JC_14_TextFields_Character_LImit
     </string>
+    <string name="title_activity_jc15_canvas_custom_ui_progressbar">
+        JC_15_Canvas_Custom_UI_Progressbar
+    </string>
 </resources>
