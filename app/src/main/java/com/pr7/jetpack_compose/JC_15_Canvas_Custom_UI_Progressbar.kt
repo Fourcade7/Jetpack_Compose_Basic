@@ -7,6 +7,7 @@ import androidx.compose.ui.geometry.*
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.Animatable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
@@ -22,9 +23,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import com.pr7.jetpack_compose.ui.theme.Jetpack_ComposeTheme
 
@@ -72,6 +76,14 @@ fun customComponent(
     backgroundStrokeWidth: Float = 100f,
     foregroundindicatorColor: Color = MaterialTheme.colors.primary,
     foregroundStrokeWidth: Float = 100f,
+    bigTextFontSize: TextUnit=MaterialTheme.typography.h3.fontSize,
+    bigTextColor: Color=MaterialTheme.colors.onSurface,
+    bigTextSuffix: String="GB",
+    smallText: String="Remaining",
+    smallTextFontSize: TextUnit=MaterialTheme.typography.h6.fontSize,
+    smallTextColor: Color=MaterialTheme.colors.onSurface.copy(alpha = 0.3f)
+
+
     ) {
     var allowedIndicatorValue by remember {
         mutableStateOf(maxindicatorValue)
@@ -93,6 +105,10 @@ fun customComponent(
         targetValue = (2.4 * parcentage).toFloat(),
         animationSpec = tween(1000)
     )
+    val recievedValue by animateIntAsState(
+        targetValue = allowedIndicatorValue,
+        animationSpec = tween(1000)
+    )
     Column(
         modifier = Modifier
             .size(canvassize)
@@ -109,10 +125,20 @@ fun customComponent(
                     indicatorColor = foregroundindicatorColor,
                     indicatorStrokeWidth = foregroundStrokeWidth
                 )
-            }
+            },
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
 
     ) {
-
+        embeddedElements(
+            bigText = recievedValue,
+            bigTextFontSize =bigTextFontSize ,
+            bigTextColor =bigTextColor ,
+            bigTextSuffix =bigTextSuffix ,
+            smallText = smallText,
+            smallTextColor = smallTextColor,
+            smallTextFontSize =smallTextFontSize
+        )
     }
 }
 
@@ -161,6 +187,34 @@ fun DrawScope.foregroundIndicator(
 
     )
 }
+
+@Composable
+fun embeddedElements(
+    bigText:Int,
+    bigTextFontSize:TextUnit,
+    bigTextColor: Color,
+    bigTextSuffix:String,
+    smallText:String,
+    smallTextColor:Color,
+    smallTextFontSize:TextUnit
+){
+
+    Text(
+        text = smallText,
+        color = smallTextColor,
+        fontSize = smallTextFontSize,
+        textAlign = TextAlign.Center
+    )
+    Text(
+        text = "$bigText ${bigTextSuffix.take(2)}",
+        color = bigTextColor,
+        fontSize = bigTextFontSize,
+        textAlign = TextAlign.Center,
+        fontWeight = FontWeight.Bold
+    )
+
+}
+
 
 @Preview(showBackground = true)
 @Composable
