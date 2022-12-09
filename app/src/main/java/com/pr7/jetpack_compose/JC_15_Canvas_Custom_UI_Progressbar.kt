@@ -1,23 +1,28 @@
 package com.pr7.jetpack_compose
 
 import android.os.Bundle
+import androidx.compose.runtime.*
+import androidx.compose.animation.core.*
 import androidx.compose.ui.geometry.*
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.Animatable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
-import androidx.compose.material.ContentAlpha
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -33,6 +38,24 @@ class JC_15_Canvas_Custom_UI_Progressbar : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
+                        Column(
+                            modifier = Modifier.fillMaxSize(),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            var value by remember {
+                                mutableStateOf(0)
+                            }
+                            customComponent(indicatorValue = value)
+                            TextField(
+                                value = "$value",
+                                onValueChange ={
+                                    value=if (it.isNotEmpty()) it.toInt() else 0
+                                },
+                                keyboardOptions = KeyboardOptions(
+                                    keyboardType = KeyboardType.Number
+                                )
+                            )
+                        }
 
                 }
             }
@@ -49,9 +72,27 @@ fun customComponent(
     backgroundStrokeWidth: Float = 100f,
     foregroundindicatorColor: Color = MaterialTheme.colors.primary,
     foregroundStrokeWidth: Float = 100f,
-
-
     ) {
+    var allowedIndicatorValue by remember {
+        mutableStateOf(maxindicatorValue)
+    }
+    allowedIndicatorValue=if (indicatorValue <= maxindicatorValue){
+        indicatorValue
+    }else{
+        maxindicatorValue
+    }
+    allowedIndicatorValue
+    val animatedIndicatorValue= remember {
+        Animatable(initialValue = 0f)
+    }
+    LaunchedEffect(key1 = allowedIndicatorValue){
+        animatedIndicatorValue.animateTo(allowedIndicatorValue.toFloat())
+    }
+    val parcentage=(animatedIndicatorValue.value / maxindicatorValue)*100
+    val sweepAngle by animateFloatAsState(
+        targetValue = (2.4 * parcentage).toFloat(),
+        animationSpec = tween(1000)
+    )
     Column(
         modifier = Modifier
             .size(canvassize)
@@ -63,9 +104,9 @@ fun customComponent(
                     indicatorStrokeWidth = backgroundStrokeWidth
                 )
                 foregroundIndicator(
-                    sweepAngle = 10f,
-                    componentSize =componentSize,
-                    indicatorColor =foregroundindicatorColor,
+                    sweepAngle = sweepAngle,
+                    componentSize = componentSize,
+                    indicatorColor = foregroundindicatorColor,
                     indicatorStrokeWidth = foregroundStrokeWidth
                 )
             }
