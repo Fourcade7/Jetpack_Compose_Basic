@@ -16,6 +16,21 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".JC_17_Navigation.JC_17_Navigation_Basic"
+            android:exported="true"
+            android:label="@string/title_activity_jc17_navigation_basic"
+            android:theme="@style/Theme.Jetpack_Compose">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".JC_16_Text_Animation"
             android:exported="true"
             android:label="@string/title_activity_jc16_text_animation"
@@ -35,8 +50,6 @@
             android:exported="true"
             android:label="@string/title_activity_jc15_canvas_custom_ui_progressbar"
             android:theme="@style/Theme.Jetpack_Compose">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

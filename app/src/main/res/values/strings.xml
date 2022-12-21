@@ -27,4 +27,6 @@
         JC_15_Canvas_Custom_UI_Progressbar
     </string>
     <string name="title_activity_jc16_text_animation">JC_16_Text_Animation</string>
+    <string name="title_activity_jc17_navigation_basic">JC_17_Navigation_Basic</string>
+    <string name="title_activity_jc17_navigation">JC_17_Navigation</string>
 </resources>
