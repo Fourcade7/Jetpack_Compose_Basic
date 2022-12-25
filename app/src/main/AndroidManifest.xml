@@ -16,6 +16,36 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".JC_19_Navigation_Send_Arguments.JC_19_Send_Argument"
+            android:exported="true"
+            android:label="@string/title_activity_jc19_send_argument"
+            android:theme="@style/Theme.Jetpack_Compose">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".JC_18_Navigation_Fragment_Call.JC_18_Fragment_Call"
+            android:exported="true"
+            android:label="@string/title_activity_jc18_send_arguments"
+            android:theme="@style/Theme.Jetpack_Compose">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".JC_17_Navigation.JC_17_Navigation_Basic"
             android:exported="true"
             android:label="@string/title_activity_jc17_navigation_basic"
