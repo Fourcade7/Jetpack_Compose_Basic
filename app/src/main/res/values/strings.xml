@@ -32,4 +32,5 @@
     <string name="title_activity_jc18_fragment">JC_18_Fragment</string>
     <string name="title_activity_jc18_send_arguments">JC_18_Send_Arguments</string>
     <string name="title_activity_jc19_send_argument">JC_19_Send_Argument</string>
+    <string name="title_activity_jc20_bottom_navigation_view">JC_20_BottomNavigationView</string>
 </resources>

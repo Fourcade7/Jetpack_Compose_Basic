@@ -25,7 +25,7 @@ fun google(
     ){
         Text(
             modifier = Modifier.clickable {
-               navController.navigate(route = "yandex/"+1)
+               navController.navigate(route = passId(7))
             },
             text = "Google",
             fontSize = MaterialTheme.typography.h3.fontSize,

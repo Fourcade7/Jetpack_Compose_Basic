@@ -25,11 +25,13 @@ fun mainNavSetup(
         }
         composable(
             route = YANDEX,
-            arguments = listOf(navArgument("id"){
+            arguments = listOf(
+                navArgument("$ARGUMENT_KEY"){
                 type= NavType.IntType
-            })
+            }
+            )
         ){
-            Log.d("PR77777", "mainNavSetup: ${it.arguments?.getInt("id")}")
+            Log.d("PR77777", "mainNavSetup: ${it.arguments?.getInt(ARGUMENT_KEY)}")
             yandex()
         }
     }
