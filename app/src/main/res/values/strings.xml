@@ -33,4 +33,8 @@
     <string name="title_activity_jc18_send_arguments">JC_18_Send_Arguments</string>
     <string name="title_activity_jc19_send_argument">JC_19_Send_Argument</string>
     <string name="title_activity_jc20_bottom_navigation_view">JC_20_BottomNavigationView</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_jc21_search_app_bar">JC_21_SearchAppBar</string>
+    <string name="title_activity_jc21_circular_image">JC_21_Circular_Image</string>
+    <string name="title_activity_jc22_splash_screen">JC_22_SplashScreen</string>
 </resources>
