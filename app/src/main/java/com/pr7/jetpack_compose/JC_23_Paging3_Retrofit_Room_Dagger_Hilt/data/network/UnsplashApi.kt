@@ -1,4 +1,4 @@
-package com.pr7.jetpack_compose.JC_23_Paging3_Retrofit_Room_Dagger_Hilt.remote
+package com.pr7.jetpack_compose.JC_23_Paging3_Retrofit_Room_Dagger_Hilt.data.network
 
 import com.pr7.jetpack_compose.JC_23_Paging3_Retrofit_Room_Dagger_Hilt.model.UnsplashImage
 import com.pr7.jetpack_compose.JC_23_Paging3_Retrofit_Room_Dagger_Hilt.utils.Constants.API_KEY
