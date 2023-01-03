@@ -37,4 +37,5 @@
     <string name="title_activity_jc21_search_app_bar">JC_21_SearchAppBar</string>
     <string name="title_activity_jc21_circular_image">JC_21_Circular_Image</string>
     <string name="title_activity_jc22_splash_screen">JC_22_SplashScreen</string>
+    <string name="title_activity_jc23_paging3">JC_23_Paging3</string>
 </resources>
